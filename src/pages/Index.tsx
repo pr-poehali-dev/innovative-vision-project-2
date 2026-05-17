@@ -87,12 +87,12 @@ export default function Index() {
       <HeroSection />
 
       {/* Mission */}
-      <section id="mission" className="relative min-h-screen flex items-center justify-center py-20 bg-white">
+      <section id="mission" className="relative flex items-center justify-center py-12 bg-white">
         <div className="absolute inset-0 bg-grid-subtle opacity-30 pointer-events-none" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-xs tracking-[0.4em] text-gray-400 uppercase mb-4">О туре</p>
-            <h2 className="text-4xl md:text-6xl font-black tracking-wider mb-12 text-gray-900"
+            <h2 className="text-4xl md:text-6xl font-black tracking-wider mb-6 text-gray-900"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               10 ДНЕЙ ВНЕ ВРЕМЕНИ
             </h2>
@@ -101,7 +101,7 @@ export default function Index() {
             </p>
 
             {/* For whom */}
-            <div className="mt-20 max-w-3xl mx-auto">
+            <div className="mt-10 max-w-3xl mx-auto">
               <p className="text-xs text-gray-400 tracking-[0.4em] uppercase text-center mb-8">Этот тур для тебя, если...</p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {[
@@ -132,10 +132,10 @@ export default function Index() {
       </section>
 
       {/* Full Program — Timeline */}
-      <section id="community" className="relative py-20 bg-white">
+      <section id="community" className="relative py-12 bg-white">
         <div className="absolute inset-0 bg-grid-subtle opacity-30 pointer-events-none" />
         <div className="relative z-10">
-          <div className="container mx-auto px-6 mb-16 text-center">
+          <div className="container mx-auto px-6 mb-8 text-center">
             <p className="text-xs tracking-[0.4em] text-gray-400 uppercase mb-4">Программа</p>
             <h2 className="text-4xl md:text-6xl font-black tracking-wider text-gray-900"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}>
@@ -157,7 +157,7 @@ export default function Index() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 }}
                   viewport={{ once: true, margin: "-80px" }}
-                  className="relative mb-16 md:mb-24"
+                  className="relative mb-10 md:mb-14"
                 >
                   {/* dot */}
                   <div className="absolute left-1/2 top-8 w-3 h-3 rounded-full bg-gray-900 border-2 border-white -translate-x-1/2 z-10 hidden md:block" />
@@ -217,9 +217,9 @@ export default function Index() {
       </section>
 
       {/* Accommodation Section */}
-      <section id="accommodation" className="relative py-20 bg-gray-50">
+      <section id="accommodation" className="relative py-12 bg-gray-50">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <p className="text-xs tracking-[0.4em] text-gray-400 uppercase mb-4">Где живём</p>
             <h2 className="text-4xl md:text-6xl font-black tracking-wider text-gray-900"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}>
@@ -256,7 +256,7 @@ export default function Index() {
       </section>
 
       {/* Price Section */}
-      <section id="price" className="relative py-20 bg-white">
+      <section id="price" className="relative py-12 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto text-center">
             <p className="text-xs tracking-[0.4em] text-gray-400 uppercase mb-4">Стоимость</p>
@@ -327,7 +327,7 @@ export default function Index() {
       </section>
 
       {/* Organizer */}
-      <section className="relative py-24 bg-gray-950 overflow-hidden">
+      <section className="relative py-12 bg-gray-950 overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none"
           style={{ backgroundImage: "radial-gradient(circle at 70% 50%, #f9a8d4 0%, transparent 60%), radial-gradient(circle at 20% 80%, #818cf8 0%, transparent 50%)" }} />
         <div className="container mx-auto px-6 relative z-10">
@@ -372,10 +372,10 @@ export default function Index() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="relative py-20 bg-gray-50">
+      <section id="faq" className="relative py-12 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-center mb-8">
               <p className="text-xs tracking-[0.4em] text-gray-400 uppercase mb-4">FAQ</p>
               <h2 className="text-4xl font-black tracking-wider text-gray-900"
                 style={{ fontFamily: "'Cormorant Garamond', serif" }}>
@@ -410,9 +410,9 @@ export default function Index() {
       </section>
 
       {/* Footer Contacts */}
-      <footer id="contacts" className="bg-gray-950 text-white py-16 px-6">
+      <footer id="contacts" className="bg-gray-950 text-white py-10 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <p className="text-xs tracking-[0.5em] text-gray-500 uppercase mb-3">Готова к путешествию?</p>
             <h2 className="text-4xl md:text-5xl font-black tracking-wider mb-4"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}>
@@ -421,7 +421,7 @@ export default function Index() {
             <p className="text-gray-400 text-sm">22 — 31 июля 2026 · Остров Бали</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             {/* Phone */}
             <a
               href="tel:+79677749016"
@@ -470,7 +470,7 @@ export default function Index() {
           </div>
 
           {/* WhatsApp CTA */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <a
               href="https://wa.me/79677749016"
               target="_blank"
