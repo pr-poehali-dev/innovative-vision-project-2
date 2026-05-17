@@ -118,8 +118,8 @@ const SmoothScrollHero: React.FC<SmoothScrollHeroProps> = ({
                     <MapPin className="w-5 h-5 text-white" />
                   </div>
                 </div>
-                <div className="text-2xl md:text-3xl font-black text-white mb-1">2</div>
-                <div className="text-xs md:text-sm text-gray-300 font-medium">Роскошные виллы</div>
+                <div className="text-2xl md:text-3xl font-black text-white mb-1">8+</div>
+                <div className="text-xs md:text-sm text-gray-300 font-medium">Локаций острова</div>
               </div>
 
               <div className="text-center">
@@ -128,8 +128,8 @@ const SmoothScrollHero: React.FC<SmoothScrollHeroProps> = ({
                     <Users className="w-5 h-5 text-white" />
                   </div>
                 </div>
-                <div className="text-2xl md:text-3xl font-black text-white mb-1">∞</div>
-                <div className="text-xs md:text-sm text-gray-300 font-medium">Новых подруг</div>
+                <div className="text-2xl md:text-3xl font-black text-white mb-1">100+</div>
+                <div className="text-xs md:text-sm text-gray-300 font-medium">Впечатлений</div>
               </div>
 
               <div className="text-center">
@@ -139,7 +139,7 @@ const SmoothScrollHero: React.FC<SmoothScrollHeroProps> = ({
                   </div>
                 </div>
                 <div className="text-2xl md:text-3xl font-black text-white mb-1">1</div>
-                <div className="text-xs md:text-sm text-gray-300 font-medium">Лучшая ты</div>
+                <div className="text-xs md:text-sm text-gray-300 font-medium">Обновлённая ты</div>
               </div>
             </div>
 
@@ -155,12 +155,7 @@ const SmoothScrollHero: React.FC<SmoothScrollHeroProps> = ({
             </LiquidButton>
 
             <div className="mt-12 pt-6 border-t border-white/20">
-              <p className="text-xs text-gray-400 mb-3 font-medium">22–31 ИЮЛЯ · БАЛИ, ИНДОНЕЗИЯ · 265 000 ₽</p>
-              <div className="flex flex-wrap justify-center items-center gap-4 text-gray-300">
-                <span className="text-xs font-semibold">ПИЛАТЕС КАЖДЫЙ ДЕНЬ</span>
-                <span className="text-xs font-semibold">ВИЛЛЫ ВКЛЮЧЕНЫ</span>
-                <span className="text-xs font-semibold">ДЛЯ ЛЮБОГО УРОВНЯ</span>
-              </div>
+              <p className="text-xs text-gray-400 font-medium">22–31 ИЮЛЯ 2026 · БАЛИ, ИНДОНЕЗИЯ · 265 000 ₽</p>
             </div>
           </div>
         </motion.div>

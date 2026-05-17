@@ -1,7 +1,5 @@
 import HeroSection from "@/components/HeroSection"
 import { TextGradientScroll } from "@/components/ui/text-gradient-scroll"
-import { Timeline } from "@/components/ui/timeline"
-import { StaggerTestimonials } from "@/components/ui/stagger-testimonials"
 import { motion } from "framer-motion"
 import SmoothScrollHero from "@/components/ui/smooth-scroll-hero"
 import Icon from "@/components/ui/icon"
@@ -9,37 +7,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 export default function Index() {
   const missionStatement =
-    "Представь: утро на Бали, ты выходишь на пилатес с видом на рисовые террасы. Потом — океан, смех, новые подруги, которые понимают тебя без слов. Вечером — огненный закат у храма Uluwatu. Это не просто тур. Это 10 дней, когда ты наконец ставишь себя на первое место. Возвращаешься другой — влюблённой в себя, наполненной и готовой к переменам."
-
-  const timelineEntries = [
-    {
-      id: 1,
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/33224057-00e1-47b6-8572-9b5326804c71.jpg",
-      alt: "Пилатес на Бали",
-      title: "Пилатес каждый день",
-      description:
-        "Ежедневные практики с Маргаритой — тренером, которая помогает не просто двигаться, а чувствовать тело. Подходит для любого уровня: от новичка до продвинутого. Ты удивишься, как тело раскрывается, когда вокруг — тропический рай.",
-      layout: "left" as const,
-    },
-    {
-      id: 2,
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/de5c766f-2f3e-48c3-b4d0-6dc6d7b4a3e1.jpg",
-      alt: "Снорклинг с мантами на Нуса-Пениде",
-      title: "Снорклинг с мантами",
-      description:
-        "Остров Нуса-Пенида — место, где мечты сбываются. Ты окунёшься в кристальный океан и проплывёшь рядом с огромными мантами. Это один из тех моментов, которые остаются с тобой навсегда и меняют взгляд на мир.",
-      layout: "right" as const,
-    },
-    {
-      id: 3,
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/5c28a7cb-b9bb-404f-8c9b-5b2a56fe515b.jpg",
-      alt: "Серфинг на Бали",
-      title: "Первая волна — твоя",
-      description:
-        "День 8 — урок серфинга с инструктором на пляжах Куты. Никакого опыта не нужно. Ты встанешь на доску, поймаешь волну и почувствуешь что-то, что сложно описать словами — чистую свободу и гордость за себя.",
-      layout: "left" as const,
-    },
-  ]
+    "Вас ждут 10 дней вне времени и суеты. Пилатес, приключения, круг единомышленниц и полная свобода быть собой. Программа составлена так, чтобы вы вернулись обновлёнными — влюбленными в себя и этот мир!"
 
   const programDays = [
     { day: "22 июля", title: "БАЛИ ВСТРЕЧАЕТ", location: "Убуд", desc: "Встреча в аэропорту Денпасар, трансфер на виллу, восстановительная тренировка на закате, общий ужин и знакомство." },
@@ -84,53 +52,44 @@ export default function Index() {
             />
 
             {/* For whom */}
-            <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
-              <p className="text-sm text-gray-500 col-span-full text-center mb-2 tracking-wider uppercase">Этот тур для тебя, если...</p>
-              {[
-                { icon: "🌿", text: "Устала от городского ритма и хочешь выдохнуть" },
-                { icon: "🤍", text: "Едешь одна, но хочешь тепла и новых подруг" },
-                { icon: "🧘‍♀️", text: "Хочешь совместить отдых с движением для тела и души" },
-                { icon: "🌊", text: "Хочешь увезти с Бали не только загар, но и покой" },
-                { icon: "📸", text: "Пора обновить Instagram-ленту — и саму себя" },
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3 bg-gray-50 rounded-xl p-4">
-                  <span className="text-xl">{item.icon}</span>
-                  <p className="text-gray-700 text-sm leading-relaxed">{item.text}</p>
-                </div>
-              ))}
+            <div className="mt-20 max-w-3xl mx-auto">
+              <p className="text-xs text-gray-400 tracking-[0.4em] uppercase text-center mb-8">Этот тур для тебя, если...</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {[
+                  { icon: "🌿", title: "Нужна пауза", text: "Устала от городского ритма и хочешь наконец выдохнуть" },
+                  { icon: "🤍", title: "Едешь одна", text: "Хочешь тепла, искренних разговоров и новых подруг" },
+                  { icon: "🧘‍♀️", title: "Тело и душа", text: "Хочешь совместить настоящий отдых с движением и практикой" },
+                  { icon: "🌊", title: "Глубокий покой", text: "Хочешь увезти с Бали не только загар, но и внутреннюю тишину" },
+                  { icon: "📸", title: "Новая ты", text: "Пора обновить не только ленту, но и взгляд на себя и мир" },
+                  { icon: "✨", title: "Момент для себя", text: "Ты давно заслуживаешь это путешествие — и знаешь об этом" },
+                ].map((item, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: i * 0.07 }}
+                    viewport={{ once: true }}
+                    className="flex flex-col gap-2 bg-gray-50 rounded-2xl p-5 border border-gray-100 hover:border-gray-200 hover:shadow-sm transition-all"
+                  >
+                    <span className="text-2xl">{item.icon}</span>
+                    <p className="font-semibold text-gray-900 text-sm">{item.title}</p>
+                    <p className="text-gray-500 text-sm leading-relaxed">{item.text}</p>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Timeline — key experiences */}
-      <section id="community" className="relative py-20 bg-white">
-        <div className="absolute inset-0 bg-grid-subtle opacity-30 pointer-events-none" />
-        <div className="relative z-10">
-          <div className="container mx-auto px-6 mb-16">
-            <div className="text-center">
-              <p className="text-xs tracking-[0.4em] text-gray-400 uppercase mb-4">Программа</p>
-              <h2 className="text-4xl md:text-6xl font-black tracking-wider mb-6 text-gray-900"
-                style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                ЧТО ВАС ЖДЁТ
-              </h2>
-              <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-                10 дней незабываемых впечатлений, пилатеса и настоящих приключений
-              </p>
-            </div>
-          </div>
-          <Timeline entries={timelineEntries} />
         </div>
       </section>
 
       {/* Full Program */}
-      <section className="relative py-20 bg-gray-50">
+      <section id="community" className="relative py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-xs tracking-[0.4em] text-gray-400 uppercase mb-4">День за днём</p>
-            <h2 className="text-4xl md:text-5xl font-black tracking-wider text-gray-900"
+            <p className="text-xs tracking-[0.4em] text-gray-400 uppercase mb-4">Программа</p>
+            <h2 className="text-4xl md:text-6xl font-black tracking-wider text-gray-900"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              ПОЛНАЯ ПРОГРАММА
+              ЧТО ВАС ЖДЁТ
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
@@ -215,58 +174,68 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="bg-amber-50 border border-amber-100 rounded-2xl p-5 text-left mb-8">
-              <p className="text-sm font-semibold text-amber-800 mb-1">✈️ Рекомендованные рейсы</p>
-              <p className="text-sm text-amber-700">Прямые рейсы из Москвы. По возможности объединим всю группу на один рейс, чтобы познакомиться уже в пути. Если удобен другой вариант — вас также встретят и сопроводят до виллы.</p>
+            <div className="bg-amber-50 border border-amber-100 rounded-2xl p-6 text-left mb-8">
+              <p className="text-base font-bold text-amber-900 mb-1 flex items-center gap-2">
+                ✈️ Рекомендованные рейсы
+              </p>
+              <p className="text-sm text-amber-700 mb-5">По возможности объединим всю группу на один рейс, чтобы познакомиться уже в пути. Если удобен другой вариант — вас встретят и сопроводят до виллы.</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-white rounded-xl p-4 border border-amber-100">
+                  <p className="text-xs font-semibold text-amber-800 uppercase tracking-wider mb-3">Рейс туда · 22 июля</p>
+                  <div className="w-full aspect-[16/7] bg-amber-100 rounded-lg flex items-center justify-center border-2 border-dashed border-amber-200">
+                    <p className="text-xs text-amber-400 text-center px-4">Скриншот рейса на прилёт</p>
+                  </div>
+                </div>
+                <div className="bg-white rounded-xl p-4 border border-amber-100">
+                  <p className="text-xs font-semibold text-amber-800 uppercase tracking-wider mb-3">Рейс обратно · 31 июля</p>
+                  <div className="w-full aspect-[16/7] bg-amber-100 rounded-lg flex items-center justify-center border-2 border-dashed border-amber-200">
+                    <p className="text-xs text-amber-400 text-center px-4">Скриншот рейса на вылет</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Organizer */}
-      <section className="relative py-20 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="max-w-2xl mx-auto text-center">
-            <p className="text-xs tracking-[0.4em] text-gray-400 uppercase mb-10">Организатор и тренер</p>
-            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm">
-              <div className="w-24 h-24 rounded-full bg-gray-200 mx-auto mb-6 overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-stone-300 to-stone-400 flex items-center justify-center">
-                  <span className="text-3xl">👩‍🦰</span>
+      <section className="relative py-24 bg-gray-950 overflow-hidden">
+        <div className="absolute inset-0 opacity-10 pointer-events-none"
+          style={{ backgroundImage: "radial-gradient(circle at 70% 50%, #f9a8d4 0%, transparent 60%), radial-gradient(circle at 20% 80%, #818cf8 0%, transparent 50%)" }} />
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+              {/* Photo placeholder */}
+              <div className="flex-shrink-0">
+                <div className="relative">
+                  <div className="w-48 h-48 md:w-64 md:h-64 rounded-3xl bg-gradient-to-br from-pink-400/20 to-violet-500/20 border border-white/10 flex items-center justify-center overflow-hidden">
+                    <span className="text-7xl">👩‍🦰</span>
+                  </div>
+                  <div className="absolute -bottom-3 -right-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-4 py-2">
+                    <p className="text-white text-xs font-semibold tracking-wider">@helyfely</p>
+                  </div>
                 </div>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                Абрамович Маргарита
-              </h3>
-              <p className="text-sm text-gray-400 tracking-wider mb-6">@helyfely</p>
-              <p className="text-gray-600 leading-relaxed text-base max-w-lg mx-auto">
-                Тренер по пилатесу, растяжке и функциональному тренингу. Твой друг, наставник и проводник в мир осознанного движения. Глубоко верю, что каждое тело уникально. На тренировках не просто учу двигаться — учу чувствовать и слышать тело, успокаивать ум и раскрывать внутреннюю силу.
-              </p>
+              {/* Info */}
+              <div className="text-center md:text-left">
+                <p className="text-xs tracking-[0.4em] text-gray-500 uppercase mb-3">Организатор и тренер</p>
+                <h3 className="text-3xl md:text-4xl font-black text-white mb-4"
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                  Абрамович Маргарита
+                </h3>
+                <p className="text-gray-400 leading-relaxed text-base mb-6 max-w-md">
+                  Тренер по пилатесу, растяжке и функциональному тренингу. Твой друг, наставник и проводник в мир осознанного движения. Глубоко верю, что каждое тело уникально — на тренировках учу чувствовать и слышать себя, успокаивать ум и раскрывать внутреннюю силу.
+                </p>
+                <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                  {["Пилатес", "Растяжка", "Функциональный тренинг", "Осознанное движение"].map((tag) => (
+                    <span key={tag} className="text-xs text-gray-300 bg-white/10 border border-white/10 px-3 py-1.5 rounded-full">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section id="testimonials" className="relative py-20 bg-white">
-        <div className="absolute inset-0 bg-grid-subtle opacity-30 pointer-events-none" />
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <p className="text-xs tracking-[0.4em] text-gray-400 uppercase mb-4">Отзывы</p>
-            <h2 className="text-4xl md:text-6xl font-black tracking-wider text-gray-900 mb-6"
-              style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              ОНИ УЖЕ БЫЛИ <span className="bg-gradient-to-r from-gray-900 to-gray-500 bg-clip-text text-transparent">С НАМИ</span>
-            </h2>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
-              Реальные истории участниц, которые вернулись обновлёнными и влюблёнными в себя.
-            </p>
-          </motion.div>
-          <StaggerTestimonials />
         </div>
       </section>
 
@@ -317,7 +286,7 @@ export default function Index() {
               style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               SHE BALI
             </h2>
-            <p className="text-gray-400 text-sm">22 — 31 июля · Остров Бали</p>
+            <p className="text-gray-400 text-sm">22 — 31 июля 2026 · Остров Бали</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
@@ -384,10 +353,10 @@ export default function Index() {
 
           <div className="border-t border-gray-900 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-gray-600 text-xs tracking-wider">
-              © 2025 SHE BALI · Организатор: Абрамович Маргарита
+              © 2026 SHE BALI · Организатор: Абрамович Маргарита
             </p>
             <div className="flex gap-6">
-              <span className="text-gray-600 text-xs">22–31 июля 2025</span>
+              <span className="text-gray-600 text-xs">22–31 июля 2026</span>
               <span className="text-gray-600 text-xs">Бали, Индонезия</span>
               <span className="text-gray-600 text-xs">265 000 ₽</span>
             </div>
