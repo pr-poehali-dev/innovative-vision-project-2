@@ -10,7 +10,7 @@ export default function Index() {
       date: "21 июля", day: 0, title: "ПЕРЕЛЁТ", subtitle: "Вылет из Москвы",
       location: "Москва → Денпасар",
       items: ["Вылет из Москвы (рекомендованный рейс).", "Начало путешествия — знакомство с попутчицами на борту."],
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/9e76010e-5b54-482d-a1fd-b7ee9546bf20.jpg",
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/520c3d60-f0b2-4b4c-8dce-20f9c101518e.jpg",
     },
     {
       date: "22 июля", day: 1, title: "БАЛИ ВСТРЕЧАЕТ", subtitle: "Прибытие на Бали — Убуд",
