@@ -10,13 +10,13 @@ export default function Index() {
       date: "21 июля", day: 0, title: "ПЕРЕЛЁТ", subtitle: "Вылет из Москвы",
       location: "Москва → Денпасар",
       items: ["Вылет из Москвы (рекомендованный рейс).", "Начало путешествия — знакомство с попутчицами на борту."],
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/089930d6-55c2-4258-8d64-e2570f3ba830.jpg",
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/9e76010e-5b54-482d-a1fd-b7ee9546bf20.jpg",
     },
     {
       date: "22 июля", day: 1, title: "БАЛИ ВСТРЕЧАЕТ", subtitle: "Прибытие на Бали — Убуд",
       location: "Убуд",
       items: ["Встреча в аэропорту (Денпасар).", "Трансфер на виллу.", "Заселение и отдых.", "Восстановительная тренировка на закате.", "Общий ужин и знакомство."],
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/4c9f8f49-283e-42e5-a36d-d8a9d40d8d3d.jpg",
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/474f5c03-ba01-4597-97f6-875af7568e5f.png",
     },
     {
       date: "23 июля", day: 2, title: "ИЗУМРУДНЫЕ ТЕРРАСЫ", subtitle: "Убуд",
@@ -28,13 +28,13 @@ export default function Index() {
       date: "24 июля", day: 3, title: "ДРАЙВ НА ВОДЕ", subtitle: "Убуд",
       location: "Убуд",
       items: ["Завтрак.", "Рафтинг по горной реке.", "Лес обезьян.", "Отдых на вилле."],
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/7eb9de25-e295-4f82-b17c-5e5fec075420.jpg",
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/bf4fac7b-c41f-453a-9ff1-4987a14be71e.jpg",
     },
     {
       date: "25 июля", day: 4, title: "ДЕНЬ БЕЗ БУДИЛЬНИКА", subtitle: "Убуд",
       location: "Убуд",
       items: ["Завтрак.", "Дневная тренировка.", "Свободное время: спа, рынки, рестораны."],
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/33224057-00e1-47b6-8572-9b5326804c71.jpg",
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/863e80eb-a1d8-4595-aaae-ad4fb10587a7.jpg",
     },
     {
       date: "26 июля", day: 5, title: "ЗАКАТ И ТАНЕЦ КЕЧАК", subtitle: "Убуд → Кута",
