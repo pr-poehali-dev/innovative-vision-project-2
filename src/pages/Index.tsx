@@ -10,13 +10,13 @@ export default function Index() {
       date: "21 июля", day: 0, title: "ПЕРЕЛЁТ", subtitle: "Вылет из Москвы",
       location: "Москва → Денпасар",
       items: ["Вылет из Москвы (рекомендованный рейс).", "Начало путешествия — знакомство с попутчицами на борту."],
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/9e4e1563-5ee9-4048-b46c-c16dc40fe4e9.jpg",
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/5fd7e5b2-fc2f-49cc-a078-afcc0e6631da.png",
     },
     {
       date: "22 июля", day: 1, title: "БАЛИ ВСТРЕЧАЕТ", subtitle: "Прибытие на Бали — Убуд",
       location: "Убуд",
       items: ["Встреча в аэропорту (Денпасар).", "Трансфер на виллу.", "Заселение и отдых.", "Восстановительная тренировка на закате.", "Общий ужин и знакомство."],
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/1a09deec-1f99-46a5-bdc1-cd1ce2ff0951.jpg",
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/4c9f8f49-283e-42e5-a36d-d8a9d40d8d3d.jpg",
     },
     {
       date: "23 июля", day: 2, title: "ИЗУМРУДНЫЕ ТЕРРАСЫ", subtitle: "Убуд",
@@ -40,13 +40,13 @@ export default function Index() {
       date: "26 июля", day: 5, title: "ЗАКАТ И ТАНЕЦ КЕЧАК", subtitle: "Убуд → Кута",
       location: "Убуд → Кута",
       items: ["Завтрак.", "Утренняя тренировка.", "Трансфер на юг острова и заселение на виллу.", "Храм Uluwatu и закат.", "Балийский танец «Кечак»."],
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/48ecb7d5-1b31-4171-8eff-4a58ab8a62fa.jpg",
     },
     {
       date: "27 июля", day: 6, title: "ШОПИНГ И РАССЛАБЛЕНИЕ", subtitle: "Кута",
       location: "Кута",
       items: ["Завтрак.", "Дневная тренировка.", "Свободное время."],
-      image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80",
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/e8e4d1d4-4de3-4a33-9486-acd56e9d7b39.png",
     },
     {
       date: "28 июля", day: 7, title: "В ГОСТЯХ У МАНТОВ", subtitle: "Нуса-Пенида",
@@ -64,13 +64,13 @@ export default function Index() {
       date: "30 июля", day: 9, title: "ПРОЩАЛЬНЫЙ ЗАКАТ", subtitle: "Кута",
       location: "Кута",
       items: ["Завтрак.", "Утренняя тренировка.", "Свободное время (повторный серфинг / спа / магазины).", "Прощальный ужин с командой."],
-      image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80",
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/089930d6-55c2-4258-8d64-e2570f3ba830.jpg",
     },
     {
       date: "31 июля", day: 10, title: "ДО НОВЫХ ВСТРЕЧ!", subtitle: "Трансфер в аэропорт",
       location: "Денпасар",
       items: ["Трансфер в аэропорт Денпасар."],
-      image: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=800&q=80",
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/71420848-16bc-4aa9-9f7e-55f30148ea0b.jpg",
     },
   ]
 
