@@ -8,8 +8,8 @@ export default function HeroSection() {
 
   const slides = [
     {
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/6383735b-7620-40ca-bbdc-47b355089c69.jpg",
-      alt: "Роскошная вилла на Бали на закате",
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/c5359dac-5404-46e5-a9aa-0a746b9810e4.png",
+      alt: "Девушки у бассейна на вилле на Бали",
     },
     {
       image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/71420848-16bc-4aa9-9f7e-55f30148ea0b.jpg",
