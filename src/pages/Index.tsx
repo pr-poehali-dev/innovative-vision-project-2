@@ -1,25 +1,77 @@
 import HeroSection from "@/components/HeroSection"
-import { TextGradientScroll } from "@/components/ui/text-gradient-scroll"
 import { motion } from "framer-motion"
 import SmoothScrollHero from "@/components/ui/smooth-scroll-hero"
 import Icon from "@/components/ui/icon"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 export default function Index() {
-  const missionStatement =
-    "Вас ждут 10 дней вне времени и суеты. Пилатес, приключения, круг единомышленниц и полная свобода быть собой. Программа составлена так, чтобы вы вернулись обновлёнными — влюбленными в себя и этот мир!"
-
   const programDays = [
-    { day: "22 июля", title: "БАЛИ ВСТРЕЧАЕТ", location: "Убуд", desc: "Встреча в аэропорту Денпасар, трансфер на виллу, восстановительная тренировка на закате, общий ужин и знакомство." },
-    { day: "23 июля", title: "ИЗУМРУДНЫЕ ТЕРРАСЫ", location: "Убуд", desc: "Рисовые плантации Tegallalang, водопады Tegenungan и Kanto Lampo, свободное время в Убуде." },
-    { day: "24 июля", title: "ДРАЙВ НА ВОДЕ", location: "Убуд", desc: "Рафтинг по горной реке, лес обезьян, отдых на вилле." },
-    { day: "25 июля", title: "ДЕНЬ БЕЗ БУДИЛЬНИКА", location: "Убуд", desc: "Завтрак, дневная тренировка, свободное время — спа, рынки, рестораны." },
-    { day: "26 июля", title: "ЗАКАТ И КЕЧАК", location: "Убуд → Кута", desc: "Утренняя тренировка, трансфер на юг острова, храм Uluwatu и закат, балийский танец «Кечак»." },
-    { day: "27 июля", title: "ШОПИНГ И РЕЛАКС", location: "Южная Кута", desc: "Дневная тренировка, шопинг, свободное время у океана." },
-    { day: "28 июля", title: "В ГОСТЯХ У МАНТОВ", location: "Нуса-Пенида", desc: "Ранний выезд, трансфер на остров, снорклинг с мантами, панорамы Нуса-Пениды." },
-    { day: "29 июля", title: "ПЕРВАЯ ВОЛНА", location: "Кута", desc: "Утренняя тренировка, урок серфинга с инструктором, свободное время у океана." },
-    { day: "30 июля", title: "ПРОЩАЛЬНЫЙ ЗАКАТ", location: "Кута", desc: "Утренняя тренировка, свободное время — серфинг / спа / шопинг, прощальный ужин." },
-    { day: "31 июля", title: "ДО НОВЫХ ВСТРЕЧ", location: "Денпасар", desc: "Трансфер в аэропорт Денпасар." },
+    {
+      date: "21 июля", day: 0, title: "ПЕРЕЛЁТ", subtitle: "Вылет из Москвы",
+      location: "Москва → Денпасар",
+      items: ["Вылет из Москвы (рекомендованный рейс).", "Начало путешествия — знакомство с попутчицами на борту."],
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/287ca8d0-66aa-483b-95c5-3e021a19f83f.jpg",
+    },
+    {
+      date: "22 июля", day: 1, title: "БАЛИ ВСТРЕЧАЕТ", subtitle: "Прибытие на Бали — Убуд",
+      location: "Убуд",
+      items: ["Встреча в аэропорту (Денпасар).", "Трансфер на виллу.", "Заселение и отдых.", "Восстановительная тренировка на закате.", "Общий ужин и знакомство."],
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/6383735b-7620-40ca-bbdc-47b355089c69.jpg",
+    },
+    {
+      date: "23 июля", day: 2, title: "ИЗУМРУДНЫЕ ТЕРРАСЫ", subtitle: "Убуд",
+      location: "Убуд",
+      items: ["Завтрак.", "Рисовые плантации Tegallalang.", "Водопады Tegenungan и Kanto Lampo.", "Свободное время в Убуде."],
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/c9d5caae-03f8-41ab-a611-cae6ce99fb57.jpg",
+    },
+    {
+      date: "24 июля", day: 3, title: "ДРАЙВ НА ВОДЕ", subtitle: "Убуд",
+      location: "Убуд",
+      items: ["Завтрак.", "Рафтинг по горной реке.", "Лес обезьян.", "Отдых на вилле."],
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/7eb9de25-e295-4f82-b17c-5e5fec075420.jpg",
+    },
+    {
+      date: "25 июля", day: 4, title: "ДЕНЬ БЕЗ БУДИЛЬНИКА", subtitle: "Убуд",
+      location: "Убуд",
+      items: ["Завтрак.", "Дневная тренировка.", "Свободное время: спа, рынки, рестораны."],
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/33224057-00e1-47b6-8572-9b5326804c71.jpg",
+    },
+    {
+      date: "26 июля", day: 5, title: "ЗАКАТ И ТАНЕЦ КЕЧАК", subtitle: "Убуд → Кута",
+      location: "Убуд → Кута",
+      items: ["Завтрак.", "Утренняя тренировка.", "Трансфер на юг острова и заселение на виллу.", "Храм Uluwatu и закат.", "Балийский танец «Кечак»."],
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/2db9f772-4bd1-4d2a-b867-c8002e296658.jpg",
+    },
+    {
+      date: "27 июля", day: 6, title: "ШОПИНГ И РАССЛАБЛЕНИЕ", subtitle: "Южная Кута",
+      location: "Южная Кута",
+      items: ["Завтрак.", "Дневная тренировка.", "Свободное время."],
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/7c43185d-5e16-4386-95bb-549dc6f9299f.jpg",
+    },
+    {
+      date: "28 июля", day: 7, title: "В ГОСТЯХ У МАНТОВ", subtitle: "Нуса-Пенида",
+      location: "Нуса-Пенида",
+      items: ["Ранний завтрак.", "Трансфер на остров.", "Снорклинг с мантами.", "Панорамы Нуса-Пениды."],
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/de5c766f-2f3e-48c3-b4d0-6dc6d7b4a3e1.jpg",
+    },
+    {
+      date: "29 июля", day: 8, title: "ПЕРВАЯ ВОЛНА", subtitle: "Кута",
+      location: "Кута",
+      items: ["Завтрак.", "Утренняя тренировка.", "Урок серфинга с инструктором.", "Свободное время у океана."],
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/5c28a7cb-b9bb-404f-8c9b-5b2a56fe515b.jpg",
+    },
+    {
+      date: "30 июля", day: 9, title: "ПРОЩАЛЬНЫЙ ЗАКАТ", subtitle: "Кута",
+      location: "Кута",
+      items: ["Завтрак.", "Утренняя тренировка.", "Свободное время (повторный серфинг / спа / магазины).", "Прощальный ужин с командой."],
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/2462d770-73c1-481b-9a96-7e0adee10677.jpg",
+    },
+    {
+      date: "31 июля", day: 10, title: "ДО НОВЫХ ВСТРЕЧ!", subtitle: "Трансфер в аэропорт",
+      location: "Денпасар",
+      items: ["Трансфер в аэропорт Денпасар."],
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/7c43185d-5e16-4386-95bb-549dc6f9299f.jpg",
+    },
   ]
 
   const faq = [
@@ -44,12 +96,9 @@ export default function Index() {
               style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               10 ДНЕЙ ВНЕ ВРЕМЕНИ
             </h2>
-            <TextGradientScroll
-              text={missionStatement}
-              className="text-2xl md:text-3xl lg:text-4xl font-medium leading-relaxed text-gray-800"
-              type="word"
-              textOpacity="soft"
-            />
+            <p className="text-2xl md:text-3xl lg:text-4xl font-medium leading-relaxed text-gray-700 max-w-3xl mx-auto">
+              Вас ждут 10 дней вне времени и суеты. Пилатес, приключения, круг единомышленниц и полная свобода быть собой. Программа составлена так, чтобы вы вернулись обновлёнными — влюбленными в себя и этот мир!
+            </p>
 
             {/* For whom */}
             <div className="mt-20 max-w-3xl mx-auto">
@@ -82,41 +131,87 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Full Program */}
-      <section id="community" className="relative py-20 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
+      {/* Full Program — Timeline */}
+      <section id="community" className="relative py-20 bg-white">
+        <div className="absolute inset-0 bg-grid-subtle opacity-30 pointer-events-none" />
+        <div className="relative z-10">
+          <div className="container mx-auto px-6 mb-16 text-center">
             <p className="text-xs tracking-[0.4em] text-gray-400 uppercase mb-4">Программа</p>
             <h2 className="text-4xl md:text-6xl font-black tracking-wider text-gray-900"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               ЧТО ВАС ЖДЁТ
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-            {programDays.map((d, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-shadow"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="text-center min-w-[52px]">
-                    <div className="text-xs text-gray-400 leading-tight">{d.day.split(" ")[0]}</div>
-                    <div className="text-2xl font-black text-gray-900">{d.day.split(" ")[1]}</div>
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-xs font-bold tracking-wider text-gray-900">{d.title}</span>
-                      <span className="text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">{d.location}</span>
+
+          {/* Timeline */}
+          <div className="relative">
+            {/* vertical line */}
+            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gray-200 -translate-x-1/2 hidden md:block" />
+
+            {programDays.map((d, i) => {
+              const isLeft = i % 2 === 0
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  viewport={{ once: true, margin: "-80px" }}
+                  className="relative mb-16 md:mb-24"
+                >
+                  {/* dot */}
+                  <div className="absolute left-1/2 top-8 w-3 h-3 rounded-full bg-gray-900 border-2 border-white -translate-x-1/2 z-10 hidden md:block" />
+
+                  <div className="container mx-auto px-6">
+                    <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center ${isLeft ? "" : "md:[direction:rtl]"}`}>
+                      {/* Image */}
+                      <div className={isLeft ? "" : "md:[direction:ltr]"}>
+                        <div className="relative overflow-hidden rounded-2xl aspect-[4/3] bg-gray-100 shadow-sm">
+                          <img
+                            src={d.image}
+                            alt={d.title}
+                            className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                          <div className="absolute bottom-4 left-4">
+                            <span className="text-white text-xs font-semibold bg-black/40 backdrop-blur-sm px-3 py-1 rounded-full">
+                              {d.location}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Content */}
+                      <div className={isLeft ? "" : "md:[direction:ltr]"}>
+                        <div className="space-y-4">
+                          <div className="flex items-center gap-3 flex-wrap">
+                            <span className="text-xs font-bold tracking-[0.25em] text-gray-400 uppercase">{d.date}</span>
+                            {d.day > 0 && (
+                              <span className="text-xs bg-gray-900 text-white px-2.5 py-1 rounded-full font-semibold">
+                                День {d.day}
+                              </span>
+                            )}
+                          </div>
+                          <h3 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-wide text-gray-900"
+                            style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                            {d.title}
+                          </h3>
+                          <p className="text-sm text-gray-400 italic">{d.subtitle}</p>
+                          <ul className="space-y-2 pt-1">
+                            {d.items.map((item, j) => (
+                              <li key={j} className="flex items-start gap-2 text-gray-700 text-sm md:text-base leading-relaxed">
+                                <span className="text-gray-300 mt-1 flex-shrink-0">•</span>
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                    <p className="text-sm text-gray-600 leading-relaxed">{d.desc}</p>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -181,7 +276,7 @@ export default function Index() {
               <p className="text-sm text-amber-700 mb-5">По возможности объединим всю группу на один рейс, чтобы познакомиться уже в пути. Если удобен другой вариант — вас встретят и сопроводят до виллы.</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-white rounded-xl p-4 border border-amber-100">
-                  <p className="text-xs font-semibold text-amber-800 uppercase tracking-wider mb-3">Рейс туда · 22 июля</p>
+                  <p className="text-xs font-semibold text-amber-800 uppercase tracking-wider mb-3">Рейс туда · 21 июля</p>
                   <div className="w-full aspect-[16/7] bg-amber-100 rounded-lg flex items-center justify-center border-2 border-dashed border-amber-200">
                     <p className="text-xs text-amber-400 text-center px-4">Скриншот рейса на прилёт</p>
                   </div>
