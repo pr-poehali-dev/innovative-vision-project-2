@@ -10,7 +10,7 @@ export default function Index() {
       date: "21 июля", day: 0, title: "ПЕРЕЛЁТ", subtitle: "Вылет из Москвы",
       location: "Москва → Денпасар",
       items: ["Вылет из Москвы (рекомендованный рейс).", "Начало путешествия — знакомство с попутчицами на борту."],
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/287ca8d0-66aa-483b-95c5-3e021a19f83f.jpg",
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/9e4e1563-5ee9-4048-b46c-c16dc40fe4e9.jpg",
     },
     {
       date: "22 июля", day: 1, title: "БАЛИ ВСТРЕЧАЕТ", subtitle: "Прибытие на Бали — Убуд",
@@ -231,11 +231,11 @@ export default function Index() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
             {[
-              { src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80", label: "Вилла в Убуде" },
-              { src: "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800&q=80", label: "Бассейн" },
-              { src: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80", label: "Спальня" },
-              { src: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80", label: "Вилла в Куте" },
-            ].map((item, i) => (
+              "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/9e4e1563-5ee9-4048-b46c-c16dc40fe4e9.jpg",
+              "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/154bd058-4ee0-4691-8dec-522d6f0da4b6.jpg",
+              "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/b05b795f-cd01-4cb3-87b6-10a01b8211d2.jpg",
+              "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/334a193a-19a5-4688-b15d-6968a1378c4c.jpg",
+            ].map((src, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
@@ -245,14 +245,10 @@ export default function Index() {
                 className="relative overflow-hidden rounded-2xl aspect-[3/4] bg-gray-200 shadow-sm group"
               >
                 <img
-                  src={item.src}
-                  alt={item.label}
+                  src={src}
+                  alt=""
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <div className="absolute bottom-3 left-3">
-                  <span className="text-white text-xs font-semibold bg-black/40 backdrop-blur-sm px-2 py-1 rounded-full">{item.label}</span>
-                </div>
               </motion.div>
             ))}
           </div>

@@ -12,7 +12,7 @@ export default function HeroSection() {
       alt: "Роскошная вилла на Бали на закате",
     },
     {
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/1a09deec-1f99-46a5-bdc1-cd1ce2ff0951.jpg",
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/71420848-16bc-4aa9-9f7e-55f30148ea0b.jpg",
       alt: "Девушка с ковриком для йоги на Бали",
     },
     {
