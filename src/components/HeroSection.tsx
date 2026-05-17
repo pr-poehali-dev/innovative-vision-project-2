@@ -8,7 +8,7 @@ export default function HeroSection() {
 
   const slides = [
     {
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/c5359dac-5404-46e5-a9aa-0a746b9810e4.png",
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/b3e565c6-c281-4edc-85fa-6679425d2353.png",
       alt: "Девушки у бассейна на вилле на Бали",
     },
     {
@@ -44,7 +44,7 @@ export default function HeroSection() {
     <div id="hero" className="relative h-screen w-full overflow-hidden bg-black">
       <div
         className="absolute inset-0 bg-cover bg-no-repeat transition-all duration-1000 ease-in-out"
-        style={{ backgroundImage: `url('${slides[currentSlide].image}')`, backgroundPosition: currentSlide === 0 ? 'center 75%' : 'center center' }}
+        style={{ backgroundImage: `url('${slides[currentSlide].image}')`, backgroundPosition: currentSlide === 0 ? 'center 60%' : 'center center' }}
       >
         <div className="absolute inset-0 bg-black/45" />
       </div>
