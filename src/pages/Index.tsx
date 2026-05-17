@@ -10,7 +10,7 @@ export default function Index() {
       date: "21 июля", day: 0, title: "ПЕРЕЛЁТ", subtitle: "Вылет из Москвы",
       location: "Москва → Денпасар",
       items: ["Вылет из Москвы (рекомендованный рейс).", "Начало путешествия — знакомство с попутчицами на борту."],
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/5fd7e5b2-fc2f-49cc-a078-afcc0e6631da.png",
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/089930d6-55c2-4258-8d64-e2570f3ba830.jpg",
     },
     {
       date: "22 июля", day: 1, title: "БАЛИ ВСТРЕЧАЕТ", subtitle: "Прибытие на Бали — Убуд",
@@ -64,7 +64,7 @@ export default function Index() {
       date: "30 июля", day: 9, title: "ПРОЩАЛЬНЫЙ ЗАКАТ", subtitle: "Кута",
       location: "Кута",
       items: ["Завтрак.", "Утренняя тренировка.", "Свободное время (повторный серфинг / спа / магазины).", "Прощальный ужин с командой."],
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/089930d6-55c2-4258-8d64-e2570f3ba830.jpg",
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/5fd7e5b2-fc2f-49cc-a078-afcc0e6631da.png",
     },
     {
       date: "31 июля", day: 10, title: "ДО НОВЫХ ВСТРЕЧ!", subtitle: "Трансфер в аэропорт",
