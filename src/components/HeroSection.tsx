@@ -12,8 +12,8 @@ export default function HeroSection() {
       alt: "Роскошная вилла на Бали на закате",
     },
     {
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/33224057-00e1-47b6-8572-9b5326804c71.jpg",
-      alt: "Пилатес на Бали с видом на океан",
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/1a09deec-1f99-46a5-bdc1-cd1ce2ff0951.jpg",
+      alt: "Девушка с ковриком для йоги на Бали",
     },
     {
       image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/5c28a7cb-b9bb-404f-8c9b-5b2a56fe515b.jpg",
@@ -24,8 +24,9 @@ export default function HeroSection() {
   const navItems = [
     { name: "О туре", href: "#mission" },
     { name: "Программа", href: "#community" },
-    { name: "Отзывы", href: "#testimonials" },
-    { name: "Забронировать", href: "#join" },
+    { name: "Стоимость", href: "#price" },
+    { name: "Вопрос-ответ", href: "#faq" },
+    { name: "Забронировать", href: "#contacts" },
   ]
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length)
@@ -111,7 +112,7 @@ export default function HeroSection() {
           <LiquidButton
             size="xxl"
             className="font-semibold text-base tracking-widest uppercase"
-            onClick={() => scrollToSection("#join")}
+            onClick={() => scrollToSection("#contacts")}
           >
             Забронировать место
           </LiquidButton>

@@ -16,7 +16,7 @@ export default function Index() {
       date: "22 июля", day: 1, title: "БАЛИ ВСТРЕЧАЕТ", subtitle: "Прибытие на Бали — Убуд",
       location: "Убуд",
       items: ["Встреча в аэропорту (Денпасар).", "Трансфер на виллу.", "Заселение и отдых.", "Восстановительная тренировка на закате.", "Общий ужин и знакомство."],
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/6383735b-7620-40ca-bbdc-47b355089c69.jpg",
+      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/1a09deec-1f99-46a5-bdc1-cd1ce2ff0951.jpg",
     },
     {
       date: "23 июля", day: 2, title: "ИЗУМРУДНЫЕ ТЕРРАСЫ", subtitle: "Убуд",
@@ -40,13 +40,13 @@ export default function Index() {
       date: "26 июля", day: 5, title: "ЗАКАТ И ТАНЕЦ КЕЧАК", subtitle: "Убуд → Кута",
       location: "Убуд → Кута",
       items: ["Завтрак.", "Утренняя тренировка.", "Трансфер на юг острова и заселение на виллу.", "Храм Uluwatu и закат.", "Балийский танец «Кечак»."],
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/2db9f772-4bd1-4d2a-b867-c8002e296658.jpg",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
     },
     {
-      date: "27 июля", day: 6, title: "ШОПИНГ И РАССЛАБЛЕНИЕ", subtitle: "Южная Кута",
-      location: "Южная Кута",
+      date: "27 июля", day: 6, title: "ШОПИНГ И РАССЛАБЛЕНИЕ", subtitle: "Кута",
+      location: "Кута",
       items: ["Завтрак.", "Дневная тренировка.", "Свободное время."],
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/7c43185d-5e16-4386-95bb-549dc6f9299f.jpg",
+      image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80",
     },
     {
       date: "28 июля", day: 7, title: "В ГОСТЯХ У МАНТОВ", subtitle: "Нуса-Пенида",
@@ -64,13 +64,13 @@ export default function Index() {
       date: "30 июля", day: 9, title: "ПРОЩАЛЬНЫЙ ЗАКАТ", subtitle: "Кута",
       location: "Кута",
       items: ["Завтрак.", "Утренняя тренировка.", "Свободное время (повторный серфинг / спа / магазины).", "Прощальный ужин с командой."],
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/2462d770-73c1-481b-9a96-7e0adee10677.jpg",
+      image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80",
     },
     {
       date: "31 июля", day: 10, title: "ДО НОВЫХ ВСТРЕЧ!", subtitle: "Трансфер в аэропорт",
       location: "Денпасар",
       items: ["Трансфер в аэропорт Денпасар."],
-      image: "https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/files/7c43185d-5e16-4386-95bb-549dc6f9299f.jpg",
+      image: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=800&q=80",
     },
   ]
 
@@ -216,8 +216,51 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Accommodation Section */}
+      <section id="accommodation" className="relative py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="text-xs tracking-[0.4em] text-gray-400 uppercase mb-4">Где живём</p>
+            <h2 className="text-4xl md:text-6xl font-black tracking-wider text-gray-900"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              РАЗМЕЩЕНИЕ
+            </h2>
+            <p className="text-gray-500 mt-4 max-w-xl mx-auto text-sm leading-relaxed">
+              Две роскошные виллы — в тропическом Убуде и у океана в Куте. Полное погружение в атмосферу острова.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            {[
+              { src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80", label: "Вилла в Убуде" },
+              { src: "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800&q=80", label: "Бассейн" },
+              { src: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80", label: "Спальня" },
+              { src: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80", label: "Вилла в Куте" },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="relative overflow-hidden rounded-2xl aspect-[3/4] bg-gray-200 shadow-sm group"
+              >
+                <img
+                  src={item.src}
+                  alt={item.label}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute bottom-3 left-3">
+                  <span className="text-white text-xs font-semibold bg-black/40 backdrop-blur-sm px-2 py-1 rounded-full">{item.label}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Price Section */}
-      <section className="relative py-20 bg-white">
+      <section id="price" className="relative py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto text-center">
             <p className="text-xs tracking-[0.4em] text-gray-400 uppercase mb-4">Стоимость</p>
@@ -274,19 +317,13 @@ export default function Index() {
                 ✈️ Рекомендованные рейсы
               </p>
               <p className="text-sm text-amber-700 mb-5">По возможности объединим всю группу на один рейс, чтобы познакомиться уже в пути. Если удобен другой вариант — вас встретят и сопроводят до виллы.</p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="bg-white rounded-xl p-4 border border-amber-100">
-                  <p className="text-xs font-semibold text-amber-800 uppercase tracking-wider mb-3">Рейс туда · 21 июля</p>
-                  <div className="w-full aspect-[16/7] bg-amber-100 rounded-lg flex items-center justify-center border-2 border-dashed border-amber-200">
-                    <p className="text-xs text-amber-400 text-center px-4">Скриншот рейса на прилёт</p>
-                  </div>
-                </div>
-                <div className="bg-white rounded-xl p-4 border border-amber-100">
-                  <p className="text-xs font-semibold text-amber-800 uppercase tracking-wider mb-3">Рейс обратно · 31 июля</p>
-                  <div className="w-full aspect-[16/7] bg-amber-100 rounded-lg flex items-center justify-center border-2 border-dashed border-amber-200">
-                    <p className="text-xs text-amber-400 text-center px-4">Скриншот рейса на вылет</p>
-                  </div>
-                </div>
+              <div className="bg-white rounded-xl p-4 border border-amber-100">
+                <p className="text-xs font-semibold text-amber-800 uppercase tracking-wider mb-3">21 июля → 31 июля · Москва ↔ Денпасар</p>
+                <img
+                  src="https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/43782d96-b561-4934-8333-1f2656ba6438.png"
+                  alt="Рекомендованные рейсы"
+                  className="w-full rounded-lg"
+                />
               </div>
             </div>
           </div>
@@ -303,8 +340,12 @@ export default function Index() {
               {/* Photo placeholder */}
               <div className="flex-shrink-0">
                 <div className="relative">
-                  <div className="w-48 h-48 md:w-64 md:h-64 rounded-3xl bg-gradient-to-br from-pink-400/20 to-violet-500/20 border border-white/10 flex items-center justify-center overflow-hidden">
-                    <span className="text-7xl">👩‍🦰</span>
+                  <div className="w-48 h-48 md:w-64 md:h-64 rounded-3xl overflow-hidden">
+                    <img
+                      src="https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/a7ead507-8608-470a-bbbd-02325a878021.jpg"
+                      alt="Маргарита Абрамович"
+                      className="w-full h-full object-cover object-top"
+                    />
                   </div>
                   <div className="absolute -bottom-3 -right-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-4 py-2">
                     <p className="text-white text-xs font-semibold tracking-wider">@helyfely</p>
@@ -335,7 +376,7 @@ export default function Index() {
       </section>
 
       {/* FAQ */}
-      <section className="relative py-20 bg-gray-50">
+      <section id="faq" className="relative py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
@@ -373,7 +414,7 @@ export default function Index() {
       </section>
 
       {/* Footer Contacts */}
-      <footer className="bg-gray-950 text-white py-16 px-6">
+      <footer id="contacts" className="bg-gray-950 text-white py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-xs tracking-[0.5em] text-gray-500 uppercase mb-3">Готова к путешествию?</p>
