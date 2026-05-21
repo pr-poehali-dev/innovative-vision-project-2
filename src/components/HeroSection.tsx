@@ -96,7 +96,7 @@ export default function HeroSection() {
       <div className="relative z-10 flex h-full items-center justify-center px-6">
         <div className="text-center text-white max-w-4xl">
           <p className="text-sm md:text-base font-light tracking-[0.3em] mb-4 text-white/70 uppercase">
-            22 июля — 31 июля · Бали
+            22 июля — 31 июля · 5 августа — 14 августа · Бали
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-wider mb-4 leading-none"
             style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 700 }}>

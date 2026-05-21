@@ -78,7 +78,7 @@ export default function Index() {
     { q: "Какой уровень подготовки нужен?", a: "Подойдёт и новичкам, и продвинутым. Маргарита адаптирует программу под каждую участницу." },
     { q: "Я лечу одна, с кем буду жить?", a: "У каждой участницы будет своё личное пространство. Если хочешь жить одна — выбираешь отдельную спальню. Если уже знаешь, с кем хочешь делить комнату — можно заселиться вдвоём." },
     { q: "Как передвигаемся по острову?", a: "Основные переезды — на трансфере (минивен): из аэропорта, между Убудом и Кутой. На многие локации в свободное время — мототакси (распространено и недорого) или обычное авто." },
-    { q: "Какая погода в июле?", a: "Июль — разгар сухого сезона, лучшее время на Бали. Дождей почти нет, 28–30°C днём, океан 26–27°C, 10–11 часов солнца в день. Медные и фиолетовые закаты гарантированы." },
+    { q: "Какая погода в июле и августе?", a: "Июль и август — разгар сухого сезона, лучшее время на Бали. Дождей почти нет, 28–30°C днём, океан 26–27°C, 10–11 часов солнца в день. Медные и фиолетовые закаты гарантированы." },
   ]
 
   return (
@@ -185,11 +185,13 @@ export default function Index() {
                       <div className={isLeft ? "" : "md:[direction:ltr]"}>
                         <div className="space-y-4">
                           <div className="flex items-center gap-3 flex-wrap">
-                            <span className="text-xs font-bold tracking-[0.25em] text-gray-400 uppercase">{d.date}</span>
                             {d.day > 0 && (
                               <span className="text-xs bg-gray-900 text-white px-2.5 py-1 rounded-full font-semibold">
                                 День {d.day}
                               </span>
+                            )}
+                            {d.day === 0 && (
+                              <span className="text-xs font-bold tracking-[0.25em] text-gray-400 uppercase">{d.date}</span>
                             )}
                           </div>
                           <h3 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-wide text-gray-900"
@@ -313,13 +315,23 @@ export default function Index() {
                 ✈️ Рекомендованные рейсы
               </p>
               <p className="text-sm text-amber-700 mb-5">По возможности объединим всю группу на один рейс, чтобы познакомиться уже в пути. Если удобен другой вариант — вас встретят и сопроводят до виллы.</p>
-              <div className="bg-white rounded-xl p-4 border border-amber-100">
-                <p className="text-xs font-semibold text-amber-800 uppercase tracking-wider mb-3">21 июля → 31 июля · Москва ↔ Денпасар</p>
-                <img
-                  src="https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/43782d96-b561-4934-8333-1f2656ba6438.png"
-                  alt="Рекомендованные рейсы"
-                  className="w-full rounded-lg"
-                />
+              <div className="space-y-4">
+                <div className="bg-white rounded-xl p-4 border border-amber-100">
+                  <p className="text-xs font-semibold text-amber-800 uppercase tracking-wider mb-3">21 июля → 31 июля · Москва ↔ Денпасар</p>
+                  <img
+                    src="https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/43782d96-b561-4934-8333-1f2656ba6438.png"
+                    alt="Рекомендованные рейсы июль"
+                    className="w-full rounded-lg"
+                  />
+                </div>
+                <div className="bg-white rounded-xl p-4 border border-amber-100">
+                  <p className="text-xs font-semibold text-amber-800 uppercase tracking-wider mb-3">4 августа → 14 августа · Москва ↔ Денпасар</p>
+                  <img
+                    src="https://cdn.poehali.dev/projects/bdf8a898-15f1-41f5-9b63-360bf5aa4633/bucket/427c51b8-e517-49a1-bca5-2911c8182188.png"
+                    alt="Рекомендованные рейсы август"
+                    className="w-full rounded-lg"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -418,7 +430,7 @@ export default function Index() {
               style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               SHE BALI
             </h2>
-            <p className="text-gray-400 text-sm">22 — 31 июля 2026 · Остров Бали</p>
+            <p className="text-gray-400 text-sm">22 — 31 июля · 5 — 14 августа 2026 · Остров Бали</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -488,7 +500,7 @@ export default function Index() {
               © 2026 SHE BALI · Организатор: Абрамович Маргарита
             </p>
             <div className="flex gap-6">
-              <span className="text-gray-600 text-xs">22–31 июля 2026</span>
+              <span className="text-gray-600 text-xs">22–31 июля · 5–14 августа 2026</span>
               <span className="text-gray-600 text-xs">Бали, Индонезия</span>
               <span className="text-gray-600 text-xs">265 000 ₽</span>
             </div>
