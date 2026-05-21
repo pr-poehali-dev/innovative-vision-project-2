@@ -155,7 +155,7 @@ const SmoothScrollHero: React.FC<SmoothScrollHeroProps> = ({
             </LiquidButton>
 
             <div className="mt-12 pt-6 border-t border-white/20">
-              <p className="text-xs text-gray-400 font-medium">22–31 ИЮЛЯ 2026 · БАЛИ, ИНДОНЕЗИЯ · 265 000 ₽</p>
+              <p className="text-xs text-gray-400 font-medium">22–31 ИЮЛЯ · 5–14 АВГУСТА 2026 · БАЛИ, ИНДОНЕЗИЯ · 265 000 ₽</p>
             </div>
           </div>
         </motion.div>

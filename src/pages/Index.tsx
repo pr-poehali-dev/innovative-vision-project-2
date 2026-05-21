@@ -190,9 +190,7 @@ export default function Index() {
                                 День {d.day}
                               </span>
                             )}
-                            {d.day === 0 && (
-                              <span className="text-xs font-bold tracking-[0.25em] text-gray-400 uppercase">{d.date}</span>
-                            )}
+
                           </div>
                           <h3 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-wide text-gray-900"
                             style={{ fontFamily: "'Cormorant Garamond', serif" }}>
